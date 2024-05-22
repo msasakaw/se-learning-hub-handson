@@ -10,5 +10,8 @@ EXPOSE 80
 # ホストのindex.htmlをコンテナにコピー
 COPY ./index.html /var/www/html/index.html
 
-# Nginxを実行
+# コンテナ実行時のデフォルトコマンドを指定。
+# 端末からの入力を受け付ける状態になっているプロセスグループのことをフォアグラウンドプロセスという
+
+下記コマンドは
 CMD ["nginx", "-g", "daemon off;"]
